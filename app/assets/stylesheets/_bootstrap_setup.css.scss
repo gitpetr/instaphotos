@@ -48,11 +48,16 @@ margin-right:auto;
 
 .landing-logo {
    font-size:2rem;
-    
+
 }
 
-.navbar-brand {
-a {
-  color: red;
+ 
+.navbar-light .navbar-brand  {
+       color: red;
 }
+.active {
+  background-color: cyan;
+}
+.nav-item {
+  padding: 0 10px;
 }
