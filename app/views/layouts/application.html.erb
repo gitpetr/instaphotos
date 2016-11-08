@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Instaphoto</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all'  %>
+    <%= javascript_include_tag 'application' %>
+  </head>
+
+  <body>
+  <div class="container-fluid container-background">
+  <div class="container">
+
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <%= link_to 'InstaPhoto', root_path,  class: "nav-link active nav-landing" %>
+  </li>
+  <li class="nav-item">
+    <%= link_to "О проекте", pages_about_path, class: "nav-link nav-landing" %>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link nav-landing" href="#">Link</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link disabled" href="#">Disabled</a>
+  </li>
+</ul>
+
+
+       <p class="notice"><%= notice %></p>
+       <p class="alert"><%= alert %></p>
+
+
+    <%= yield %>
+    </div>
+    </div>
+  </body>
+</html>

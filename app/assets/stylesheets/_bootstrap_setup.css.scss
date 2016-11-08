@@ -1,0 +1,42 @@
+@import url(https://fonts.googleapis.com/css?family=Crafty+Girls);
+$display3-size: 2.5rem;
+$jumbotron-bg: rgba(255,255,255, 0.4);
+$btn-primary-bg: #6BB9F0;
+$btn-warning-bg: #E08283;
+$navbar-border-radius: 0;
+$card-cap-bg:   rgba(255,255,255, 0.5);          
+$card-bg: rgba(255,255,255, 0.4);
+$body-bg: #ECF0F1; 
+@import "bootstrap";
+.container-background {
+  width: 100%;
+  min-height: 100vh;
+  background-size: cover;
+  background-image: url(image_path('background.jpg'));
+
+}
+
+.jumbotron-landing{
+width:50%;
+margin-left:auto;
+margin-right:auto;
+}
+
+.nav-landing {
+  &link, &visited {
+color: red;
+}}
+ 
+a:active {
+color: red;
+text-decoration: none;
+}
+a:hover{
+    color: red;
+  }
+a:focus{
+  color: red;
+}
+
+
+ 
