@@ -24,19 +24,12 @@ margin-right:auto;
 
 .nav-landing {
   &link, &visited {
-color: red;
-}}
- 
-a:active {
-color: red;
+color: #3498DB;
+}
+}
+
+.nav-landing {
+  &hover, &active
+color: #666;
 text-decoration: none;
-}
-a:hover{
-    color: red;
-  }
-a:focus{
-  color: red;
-}
-
-
- 
+} 
