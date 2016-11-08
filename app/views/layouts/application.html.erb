@@ -3,13 +3,17 @@
   <head>
     <title>Instaphoto</title>
     <%= csrf_meta_tags %>
-
+     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= stylesheet_link_tag    'application', media: 'all'  %>
     <%= javascript_include_tag 'application' %>
   </head>
 
   <body>
-  <div class="container-fluid container-background container-login">
+  <% if user_signed_in? %>
+    <div class="container-fluid   container-login">
+  <% else %>
+    <div class="container-fluid container-background container-login">
+  <% end %>
   <%= render "layouts/navigation" %>
   <div class="container">
 

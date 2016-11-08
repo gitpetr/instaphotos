@@ -7,6 +7,7 @@ $navbar-border-radius: 0;
 $card-cap-bg:   rgba(255,255,255, 0.5);          
 $card-bg: rgba(255,255,255, 0.4);
 $body-bg: #ECF0F1; 
+ 
 @import "bootstrap";
 .container-background {
   width: 100%;
@@ -17,30 +18,41 @@ $body-bg: #ECF0F1;
 }
 
 .jumbotron-landing{
-width:50%;
+width: 80%;
 margin-left:auto;
 margin-right:auto;
 }
 
-.nav-landing {
-  &link, &visited {
-color: #3498DB;
-}
-}
-
-.nav-landing {
-  &hover, &active{
-color: #666;
-text-decoration: none;
-}} 
-
+ 
 .container-login {
 
   padding-right:0;
   padding-left:0;
   text-align:center;
 }
-.navbar{
+.bg-transparent {
+  background-color:rgba(255,255,255,0);
+}
+
+.bgnav{
   background-image: url(image_path('bg95.jpg'));
   background-x: repeat;
+}
+
+
+.text-logo {
+   font-family: 'Crafty Girls', cursive;
+   a {color: red;}
+}
+
+
+.landing-logo {
+   font-size:2rem;
+    
+}
+
+.navbar-brand {
+a {
+  color: red;
+}
 }
