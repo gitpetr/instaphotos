@@ -1,14 +1,12 @@
-<p id="notice"><%= notice %></p>
+ <div class="card photo-form">
 
+<div class="card-block">
 <p>
-  <strong>Description:</strong>
-  <%= @photo.description %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @photo.user.email %>
-</p>
-
+<strong>Description:</strong>
+<p><%= @photo.description %></p>
+<p>Cоздал: <%= @photo.user.email %></p>
 <%= link_to 'Edit', edit_photo_path(@photo) %> |
 <%= link_to 'Back', photos_path %>
+</div>
+
+</div> 
