@@ -1,7 +1,7 @@
 class PhotosController < ApplicationController
   before_action :set_photo, only: [:show, :edit, :update, :destroy]
-  # before_action :authenticate_user!, except: [:index, :show]
-  # before_action :owner, only: [:edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index, :show]
+  before_action :owner, only: [:edit, :update, :destroy]
 
   def index
     @photos = Photo.all.order('created_at DESC')#.paginate(:page => params[:page], :per_page => 6)
@@ -33,7 +33,7 @@ class PhotosController < ApplicationController
 
   def update
       if @photo.update(photo_params)
-        redirect_to @photo, notice: 'Photo was successfully updated.'
+        redirect_to  @photo, notice: 'Photo was successfully updated.'
       else
         render :edit
       end  
