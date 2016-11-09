@@ -35,8 +35,9 @@ margin-right:auto;
 }
 
 .bgnav{
-  background-image: url(image_path('bg95.jpg'));
-  background-x: repeat;
+  background-image: url(image_path('bg.png'));
+  background-size: cover;
+  // background-x: repeat;
 }
 
 
@@ -60,4 +61,19 @@ margin-right:auto;
 }
 .nav-item {
   padding: 0 10px;
+}
+.devise-form {
+  width:50%;
+  margin-left:auto;
+  margin-right:auto;
+}
+.btn {border-radius: 50px;}
+.pullright {
+  float: right;
+  }
+.pullleft {
+  float: left;
+}
+.margintop15 {
+  margin-top: 15px;
 }
