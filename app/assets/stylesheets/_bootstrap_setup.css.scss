@@ -45,6 +45,8 @@ margin-right:auto;
   background-image: url(image_path('bg.png'));
   background-size: cover;
   // background-x: repeat;
+  padding: 0;
+  border: 0;
 }
 
 
@@ -67,7 +69,15 @@ margin-right:auto;
   background-color: cyan;
 }
 .nav-item {
-  padding: 0 10px;
+  padding: 10px 20px;
+  border: 0;
+}
+#exCollapsingNavbar2 .nav-item {
+  margin-left: 0;
+}
+.nav-link{ 
+margin: 0;
+border: 0;
 }
 .devise-form {
   width:50%;
