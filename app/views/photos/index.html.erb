@@ -4,12 +4,15 @@
 
   <div class="card-block">
 
-  <%= image_tag photo.image.url(:medium) %><br>
+  <%= link_to photo, class: "photo-link" do %>
+     <%= image_tag photo.image.url(:medium) %>
+  <% end %>
+  <br>
+  
   <strong><%= photo.description %></strong><br>
-  <%= link_to photo.user.name, profile_path(photo.user_id) if photo.user %> <br>
-  <%= link_to 'Show', photo %>
+  <%= link_to photo.user.name, profile_path(photo.user_id) %> <br>
   <% if photo.user == current_user %>
-  | <%= link_to 'Edit', edit_photo_path(photo) %> |
+   <%= link_to 'Edit', edit_photo_path(photo) %> |
   <%= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } %>
   <% end %>
   </div>
@@ -17,7 +20,5 @@
 <% end %>
 <br>
  <p><%= will_paginate @photos %> </p>
-<% if user_signed_in? %>
-<%= link_to 'New Photo', new_photo_path, class:"btn btn-primary" %>
-<% end %>
+ 
 

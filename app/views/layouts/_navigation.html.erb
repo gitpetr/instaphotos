@@ -10,15 +10,11 @@
         <ul class="nav navbar-nav pullright">
 
 
-             <% if controller.action_name == 'my_photos' %>
-               <li class="nav-item  active" >
+             
+               <li class="nav-item  <%= "active" if controller.action_name == 'my_photos' %>" >
                  <%= link_to "Мои фото", profiles_my_photos_path, class:'nav-link' %>
               </li>
-            <% else %>
-              <li class="nav-item" >
-                 <%= link_to "Мои фото", profiles_my_photos_path, class:'nav-link' %>
-              </li>
-            <% end %>
+             
 
             <% if controller.action_name == 'subscribes_list' %>
 
@@ -32,27 +28,23 @@
             <% end %>
 
 
-           <% if controller.action_name == 'friends_photos' %>
-              <li class="nav-item active">
+            
+              <li class="nav-item <%= "active" if controller.action_name == 'friends_photos' %>">
                  <%= link_to "Фото друзей", profiles_friends_photos_path, class:'nav-link' %>
               </li>
-              <% else %>
-              <li class="nav-item">
-                 <%= link_to "Фото друзей", profiles_friends_photos_path, class:'nav-link' %>
-              </li>
-              <% end %>
-
-
-
-
+               
+             
 
              <li class="nav-item">
-                <%= link_to current_user.name, edit_user_registration_path, class:'nav-link' %>
+                <%= link_to current_user.name, edit_user_registration_path, class:'btn btn-primary' %>
             </li>
+            
+            
 
            <li class="nav-item">
                 <%= link_to "Выйти", destroy_user_session_path, method: :delete, class:'nav-link' %>
            </li>
+            
         </ul>
       </div>
     </div>

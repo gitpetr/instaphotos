@@ -13,9 +13,12 @@
 <% @user.photos.each do |photo| %>
     <div class="card photo-form">
         <div class="card-block">
-            <%= image_tag photo.image.url(:medium) %><br>
-            <strong><%= photo.description %></strong><br>
             <%= link_to 'Show', photo %>
+
+            <%= image_tag photo.image.url(:medium) %>
+            <% end %>
+            <br>
+            <strong><%= photo.description %></strong><br>
             <% if photo.user == current_user %>
             | <%= link_to 'Edit', edit_photo_path(photo) %> |
             <%= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } %>
